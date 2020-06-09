@@ -4,5 +4,8 @@
   "description": "All the components conveniently in one place",
   "main": "src/index.js",
   "author": "Ryosuke",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "spooky-ui-button": "^0.0.0"
+  }
 }

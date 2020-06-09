@@ -5,5 +5,8 @@ export default {
   title: "Button",
 };
 
-export const Button = () =>
+export const Type = () =>
   html`<spooky-button type="submit">Submit</spooky-button>`;
+
+export const Color = () =>
+  html`<spooky-button type="submit" color="blue">Submit</spooky-button>`;

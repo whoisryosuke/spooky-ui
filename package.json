@@ -5,11 +5,16 @@
     "packages/*"
   ],
   "scripts": {
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "devDependencies": {
+    "@babel/core": "^7.10.2",
+    "@storybook/web-components": "^5.3.19",
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
+    "babel-loader": "^8.1.0",
     "commitizen": "^4.1.2",
     "cz-conventional-changelog": "^3.2.0",
     "husky": "^4.2.5",

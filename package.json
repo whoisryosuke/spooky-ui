@@ -1,0 +1,10 @@
+{
+  "name": "spooky-ui",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "lerna": "^3.22.0"
+  }
+}

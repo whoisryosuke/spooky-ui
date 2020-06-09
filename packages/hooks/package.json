@@ -1,0 +1,8 @@
+{
+  "name": "spooky-ui-hooks",
+  "version": "0.0.0",
+  "description": "Hooks used in Spooky UI",
+  "main": "src/index.js",
+  "author": "Ryosuke",
+  "license": "MIT"
+}

@@ -10,3 +10,6 @@ export const Type = () =>
 
 export const Color = () =>
   html`<spooky-button type="submit" color="blue">Submit</spooky-button>`;
+
+export const Margin = () =>
+  html`<spooky-button type="submit" .margin=${3}>Submit</spooky-button>`;

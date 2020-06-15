@@ -13,3 +13,8 @@ export const Color = () =>
 
 export const Margin = () =>
   html`<spooky-button type="submit" .margin=${3}>Submit</spooky-button>`;
+
+export const ResponsiveWidth = () =>
+  html`<spooky-button type="submit" .width=${['100%', '50%']}
+    >Submit</spooky-button
+  >`;

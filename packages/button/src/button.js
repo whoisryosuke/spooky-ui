@@ -20,7 +20,6 @@ function createUtilityStyles(props) {
     });
   }
   return css`
-    /* tslint-disable-next-line */
     :host {
       ${styles}
     }

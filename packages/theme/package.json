@@ -1,0 +1,22 @@
+{
+  "name": "spooky-ui-theme",
+  "description": "Themes and theme provider component",
+  "version": "0.0.0",
+  "main": "theme-provider.js",
+  "author": "Ryosuke",
+  "license": "MIT",
+  "keywords": [
+    "theme",
+    "theme-provider",
+    "webcomponent",
+    "web-component",
+    "haunted",
+    "functional-programming"
+  ],
+  "dependencies": {
+    "haunted": "^4.7.0",
+    "lit-element": "^2.3.1",
+    "lit-html": "^1.2.1",
+    "spooky-ui-hooks": "^0.0.0"
+  }
+}

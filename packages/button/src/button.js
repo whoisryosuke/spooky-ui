@@ -23,6 +23,11 @@ function createUtilityStyles(props) {
     :host {
       ${styles}
     }
+    button {
+      font-family: inherit;
+      font-weight: inherit;
+      color: inherit;
+    }
   `;
 }
 

@@ -1,8 +1,8 @@
-import { html } from "lit-html";
-import "./button.js";
+import { html } from 'lit-html';
+import '../src/button.js';
 
 export default {
-  title: "Button",
+  title: 'Button',
 };
 
 export const Type = () =>

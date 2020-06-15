@@ -1,52 +1,33 @@
-import { html } from "lit-html";
-import { css, unsafeCSS } from "lit-element";
-import { component } from "haunted";
-import { useConstructableStylesheets } from "spooky-ui-hooks";
-import { convertProps } from "utility-props";
+import { html } from 'lit-html';
+import { css, unsafeCSS } from 'lit-element';
+import { useConstructableStylesheets } from 'spooky-ui-hooks';
+import { convertProps } from 'utility-props';
 
-const namespace = "spky";
+const namespace = 'spky';
 
 function createUtilityStyles(props) {
   let styles = css``;
-  for (const cssProperty in props) {
-    const conversion = convertProps(cssProperty);
-    if (props[cssProperty] !== undefined) {
-      const propValue = conversion(props[cssProperty], namespace);
-      styles = css`${styles}\n${unsafeCSS(cssProperty + ":")} ${unsafeCSS(
-        propValue
-      )};`;
-    }
-  }
-  console.log(
-    "final styles",
-    styles,
-    css`
-      :host {
-        ${styles}
+  const cssProperties = Object.keys(props);
+  if (cssProperties && cssProperties.length > 0) {
+    cssProperties.forEach(cssProperty => {
+      const conversion = convertProps(cssProperty);
+      if (props[cssProperty] !== undefined) {
+        const propValue = conversion(props[cssProperty], namespace);
+        styles = css`${styles}\n${unsafeCSS(`${cssProperty}:`)} ${unsafeCSS(
+          propValue
+        )};`;
       }
-    `
-  );
+    });
+  }
   return css`
+    /* tslint-disable-next-line */
     :host {
       ${styles}
     }
   `;
 }
 
-export function Button({
-  type,
-  color,
-  width,
-  minWidth,
-  maxWidth,
-  height,
-  maxHeight,
-  minHeight,
-  padding,
-  margin,
-  fontSize,
-  textAlign,
-}) {
+export function Button({ type, color, width, height, margin }) {
   const styles = [
     createUtilityStyles({
       width,
@@ -55,9 +36,6 @@ export function Button({
       margin,
     }),
     css`
-      :host {
-      }
-
       button {
         width: 100%;
       }
@@ -67,25 +45,23 @@ export function Button({
   useConstructableStylesheets(this, styles);
 
   return html`
-    <button type=${type ? type : "button"}>
+    <button type=${type || 'button'}>
       <slot></slot>
     </button>
   `;
 }
 
 Button.observedAttributes = [
-  "type",
-  "color",
-  "width",
-  "min-width",
-  "max-width",
-  "height",
-  "max-height",
-  "min-height",
-  "padding",
-  "margin",
-  "font-size",
-  "text-align",
+  'type',
+  'color',
+  'width',
+  'min-width',
+  'max-width',
+  'height',
+  'max-height',
+  'min-height',
+  'padding',
+  'margin',
+  'font-size',
+  'text-align',
 ];
-
-customElements.define("spooky-button", component(Button));

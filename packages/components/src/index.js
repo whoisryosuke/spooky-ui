@@ -1,3 +1,3 @@
-import { Button } from "spooky-ui-button";
+import { Button } from 'spooky-ui-button';
 
 export { Button };

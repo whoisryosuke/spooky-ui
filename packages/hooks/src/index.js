@@ -1,3 +1,3 @@
-import { useConstructableStylesheets } from "./useConstructableStylesheets";
+import { useConstructableStylesheets } from './useConstructableStylesheets.js';
 
 export { useConstructableStylesheets };

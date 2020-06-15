@@ -1,5 +1,5 @@
-import { useLayoutEffect } from "haunted";
-import { supportsAdoptingStyleSheets } from "lit-element";
+import { useLayoutEffect } from 'haunted';
+import { supportsAdoptingStyleSheets } from 'lit-element';
 
 export function useConstructableStylesheets(el, styles) {
   /**
@@ -11,7 +11,8 @@ export function useConstructableStylesheets(el, styles) {
    * end of the `shadowRoot` to [mimic spec
    * behavior](https://wicg.github.io/construct-stylesheets/#using-constructed-stylesheets).
    */
-  const adoptStyles = (el) => {
+  const adoptStyles = element => {
+    const componentDOM = element;
     if (styles.length === 0) {
       return;
     }
@@ -22,18 +23,18 @@ export function useConstructableStylesheets(el, styles) {
     // rendering
     if (window.ShadyCSS !== undefined && !window.ShadyCSS.nativeShadow) {
       window.ShadyCSS.ScopingShim.prepareAdoptedCssText(
-        styles.map((s) => s.cssText),
-        el.localName
+        styles.map(s => s.cssText),
+        componentDOM.localName
       );
     } else if (supportsAdoptingStyleSheets) {
-      el.shadowRoot.adoptedStyleSheets = styles.map((s) =>
+      componentDOM.shadowRoot.adoptedStyleSheets = styles.map(s =>
         s instanceof CSSStyleSheet ? s : s.styleSheet
       );
     } else {
-      styles.forEach((s) => {
-        const style = document.createElement("style");
+      styles.forEach(s => {
+        const style = document.createElement('style');
         style.textContent = s.cssText;
-        el.shadowRoot.appendChild(style);
+        componentDOM.shadowRoot.appendChild(style);
       });
     }
   };

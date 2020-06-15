@@ -1,0 +1,20 @@
+{
+  "name": "spooky-ui-core",
+  "description": "Core functions for Spooky UI library",
+  "version": "0.0.0",
+  "main": "index.js",
+  "author": "Ryosuke",
+  "license": "MIT",
+  "keywords": [
+    "utilities",
+    "utility",
+    "webcomponent",
+    "web-component",
+    "haunted",
+    "functional-programming"
+  ],
+  "dependencies": {
+    "lit-element": "^2.3.1",
+    "utility-props": "^0.2.0"
+  }
+}

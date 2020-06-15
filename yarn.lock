@@ -10998,6 +10998,11 @@ util-promisify@^2.1.0:
   dependencies:
     object.getownpropertydescriptors "^2.0.3"
 
+utility-props@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/utility-props/-/utility-props-0.2.0.tgz#022b7c8101d1b5508c88fcb449003a2c59e75976"
+  integrity sha512-i0T/uBTt7hEB9TMytKVN9wA9pia18LVaqXgVkzgBsHYboqxNrG3sXH5WXRsoIAEZskGcxeSy2i8e8aHcF2tYPA==
+
 utils-merge@1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/utils-merge/-/utils-merge-1.0.1.tgz#9f95710f50a267947b2ccc124741c1028427e713"

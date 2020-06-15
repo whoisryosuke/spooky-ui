@@ -1,5 +1,5 @@
 import { html } from 'lit-html';
-import '../src/button.js';
+import '../button.js';
 
 export default {
   title: 'Button',

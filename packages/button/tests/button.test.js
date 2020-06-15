@@ -1,6 +1,6 @@
 import { html, fixture, expect } from '@open-wc/testing';
 
-import '../src/button.js';
+import '../button.js';
 
 describe('SpookyButton', () => {
   it('supports slotted text', async () => {

@@ -1,13 +1,12 @@
-import { html } from "lit-html";
-import { css, unsafeCSS } from "lit-element";
-import { component } from "haunted";
-import { useConstructableStylesheets } from "spooky-ui-hooks";
+import { html } from 'lit-html';
+import { css, unsafeCSS } from 'lit-element';
+import { useConstructableStylesheets } from 'spooky-ui-hooks';
 
 export function Button({ type, color }) {
   const styles = [
     css`
       button {
-        color: ${color ? unsafeCSS(color) : "red"};
+        color: ${color ? unsafeCSS(color) : 'red'};
       }
     `,
   ];
@@ -15,12 +14,10 @@ export function Button({ type, color }) {
   useConstructableStylesheets(this, styles);
 
   return html`
-    <button type=${type ? type : "button"}>
+    <button type=${type || 'button'}>
       <slot></slot>
     </button>
   `;
 }
 
-Button.observedAttributes = ["type", "color"];
-
-customElements.define("spooky-button", component(Button));
+Button.observedAttributes = ['type', 'color'];

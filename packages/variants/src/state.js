@@ -6,8 +6,8 @@ export default function state(prop) {
     case 'success':
       variantStyles = css`
         [variant='success'] {
-          background-color: var(--spky-colors-green-500);
-          color: white;
+          background-color: var(--spky-colors-success);
+          color: var(--spky-colors-text-inverted);
         }
       `;
       break;
@@ -15,8 +15,8 @@ export default function state(prop) {
     case 'message':
       variantStyles = css`
         [variant='success'] {
-          background-color: var(--spky-colors-blue-500);
-          color: white;
+          background-color: var(--spky-colors-message);
+          color: var(--spky-colors-text-inverted);
         }
       `;
       break;
@@ -24,8 +24,8 @@ export default function state(prop) {
     case 'warning':
       variantStyles = css`
         [variant='success'] {
-          background-color: var(--spky-colors-yellow-500);
-          color: white;
+          background-color: var(--spky-colors-warning);
+          color: var(--spky-colors-text-inverted);
         }
       `;
       break;
@@ -33,8 +33,8 @@ export default function state(prop) {
     case 'danger':
       variantStyles = css`
         [variant='success'] {
-          background-color: var(--spky-colors-red-500);
-          color: white;
+          background-color: var(--spky-colors-danger);
+          color: var(--spky-colors-text-inverted);
         }
       `;
       break;

@@ -18,3 +18,9 @@ export const ResponsiveWidth = () =>
   html`<spooky-button type="submit" .width=${['100%', '50%']}
     >Submit</spooky-button
   >`;
+
+export const Primary = () =>
+  html`<spooky-button type="submit" variant="primary">Submit</spooky-button>`;
+
+export const VariantSize = () =>
+  html`<spooky-button type="submit" size="0">Submit</spooky-button>`;

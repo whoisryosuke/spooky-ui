@@ -2,8 +2,9 @@ import { html } from 'lit-html';
 import { css } from 'lit-element';
 import { useConstructableStylesheets } from 'spooky-ui-hooks';
 import { createUtilityStyles } from 'spooky-ui-core';
+import { sizeVariants, colorVariants, stateVariants } from 'spooky-ui-variants';
 
-export function Button({ type, color, width, height, margin }) {
+export function Button({ type, color, width, height, margin, size, variant }) {
   const styles = [
     createUtilityStyles({
       width,
@@ -19,19 +20,25 @@ export function Button({ type, color, width, height, margin }) {
         color: inherit;
       }
     `,
+    colorVariants(variant),
+    stateVariants(variant),
+    sizeVariants(size),
   ];
 
   useConstructableStylesheets(this, styles);
 
   return html`
-    <button type=${type || 'button'}>
+    <button type=${type || 'button'} variant=${variant} size=${size}>
       <slot></slot>
     </button>
   `;
 }
 
 Button.observedAttributes = [
+  // Button Specific
   'type',
+
+  // Utility Props
   'color',
   'width',
   'min-width',
@@ -43,4 +50,8 @@ Button.observedAttributes = [
   'margin',
   'font-size',
   'text-align',
+
+  // Variants
+  'size',
+  'variant',
 ];

@@ -1,0 +1,33 @@
+{
+  "name": "spooky-ui-variants",
+  "version": "0.0.0",
+  "description": "Variant styles used by specific or multiple components",
+  "keywords": [
+    "css",
+    "variants"
+  ],
+  "author": "Ryosuke <ryosuke.san.hana@gmail.com>",
+  "homepage": "https://github.com/whoisryosuke/spooky-ui#readme",
+  "license": "MIT",
+  "main": "src/index.js",
+  "directories": {
+    "src": "src",
+    "test": "__tests__"
+  },
+  "files": [
+    "src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/whoisryosuke/spooky-ui.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/whoisryosuke/spooky-ui/issues"
+  },
+  "dependencies": {
+    "lit-element": "^2.3.1"
+  }
+}

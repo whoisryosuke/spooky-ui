@@ -6,7 +6,7 @@ export function ThemeProvider() {
   const styles = [
     css`
       :host {
-        /* Sizes */
+        /* Spacing */
         /* Required for any spacing props (padding, margin) */
         --spky-spacing: 8px;
         --spky-spacing-0: 0px;
@@ -18,6 +18,21 @@ export function ThemeProvider() {
         --spky-spacing-6: 128px;
         --spky-spacing-7: 256px;
         --spky-spacing-8: 512px;
+
+        /* Typography */
+        /* Font Sizing */
+        /* Required for any typography props (font-size) */
+        --spky-font-sizes: 16px;
+        --spky-font-sizes-0: 10px;
+        --spky-font-sizes-1: 12px;
+        --spky-font-sizes-2: 16px;
+        --spky-font-sizes-3: 20px;
+        --spky-font-sizes-4: 24px;
+        --spky-font-sizes-5: 28px;
+        --spky-font-sizes-6: 32px;
+        --spky-font-sizes-7: 36px;
+        --spky-font-sizes-8: 48px;
+        --spky-font-sizes-9: 60px;
 
         /* Colors */
         /* None of these names are required. Just here as example. */

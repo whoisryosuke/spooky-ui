@@ -1,0 +1,9 @@
+{
+  "extends": ["eslint-config-prettier", "@open-wc/eslint-config"],
+  "rules": {
+    // Added because stories use literal values
+    "lit/no-useless-template-literals": 0,
+    // Added because tests import deps from monorepo
+    "import/no-extraneous-dependencies": 0
+  }
+}

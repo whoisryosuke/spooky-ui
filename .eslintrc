@@ -1,5 +1,5 @@
 {
-  "extends": ["eslint-config-prettier", "@open-wc/eslint-config"],
+  "extends": ["@open-wc/eslint-config", "eslint-config-prettier"],
   "rules": {
     // Added because stories use literal values
     "lit/no-useless-template-literals": 0,

@@ -1,10 +1,22 @@
 import { html } from 'lit-html';
+import { ifDefined } from 'lit-html/directives/if-defined';
 import { css } from 'lit-element';
 import { useConstructableStylesheets } from 'spooky-ui-hooks';
 import { createUtilityStyles } from 'spooky-ui-core';
 import { sizeVariants, colorVariants, stateVariants } from 'spooky-ui-variants';
 
-export function Button({ type, color, width, height, margin, size, variant }) {
+export function Button({
+  type,
+  title,
+  ariaLabel,
+  ariaLabelledby,
+  color,
+  width,
+  height,
+  margin,
+  size,
+  variant,
+}) {
   const styles = [
     createUtilityStyles({
       width,
@@ -28,7 +40,14 @@ export function Button({ type, color, width, height, margin, size, variant }) {
   useConstructableStylesheets(this, styles);
 
   return html`
-    <button type=${type || 'button'} variant=${variant} size=${size}>
+    <button
+      title=${ifDefined(title)}
+      type=${type || 'button'}
+      aria-label=${ifDefined(ariaLabel)}
+      aria-labelledby=${ifDefined(ariaLabelledby)}
+      variant=${ifDefined(variant)}
+      size=${ifDefined(size)}
+    >
       <slot></slot>
     </button>
   `;
@@ -37,6 +56,9 @@ export function Button({ type, color, width, height, margin, size, variant }) {
 Button.observedAttributes = [
   // Button Specific
   'type',
+  'title',
+  'aria-label',
+  'aria-labelledby',
 
   // Utility Props
   'color',

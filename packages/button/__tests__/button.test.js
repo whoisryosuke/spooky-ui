@@ -7,7 +7,7 @@ describe('SpookyButton', () => {
     const el = await fixture(
       html` <spooky-button type="submit" color="blue">Submit</spooky-button> `
     );
-    el.shadowRoot.to.equal('Submit');
+    expect(el.innerHTML).to.equal('Submit');
   });
 
   it('can override the title via attribute', async () => {
